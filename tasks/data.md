@@ -63,6 +63,15 @@ Then verify every line against the source by hand and run `pnpm schemes:check`.
 - [ ] Three questions afterwards; write down one quote per person.
 - [ ] Summarise in `packages/eval/reports/user-tests.md` (n = 5, honest).
 
+### DATA-08 · Final technical report — P0 · outline H14, write H20–23 · Expected outcome #6
+Full outline, evidence map and agent prompt: `docs/19-technical-report.md`.
+- [ ] H14: create `report/REPORT.md` with the outline from doc 19 (headings only).
+- [ ] H20: run the doc 19 agent prompt to draft it from repo evidence; fill every `[TODO]` by hand.
+- [ ] Srujan writes or reviews §4 Architecture and §5 Matching engine; Satvik adds screenshots for §6.
+- [ ] Every number traced to a file. Error analysis in §7.1 lists every engine error.
+- [ ] Export to PDF; check Kannada text and diagrams render; add the live URL and demo video link.
+- [ ] Submit with the deck before the deadline.
+
 ### DATA-07 · Pitch numbers and Q&A — P0 · H19–22
 - [ ] Copy final numbers from `reports/latest.json` into the deck (accuracy slide: N and M).
 - [ ] Fill the verdicts slide with the hero persona's real scheme names.

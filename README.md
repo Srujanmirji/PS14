@@ -13,6 +13,17 @@ An AI caseworker for Indian government schemes. It works from incomplete informa
 3. Open [`tasks/README.md`](tasks/README.md). Work is split into three tracks that run in parallel: **frontend** ([`tasks/frontend.md`](tasks/frontend.md)), **backend** ([`tasks/backend.md`](tasks/backend.md)) and **data** ([`tasks/data.md`](tasks/data.md)). Each task has an id, an owner, an hour slot, dependencies, a copy-paste prompt and an acceptance check. Each phase ends with a **gate**.
 4. Before touching a feature, read that feature's `SPEC.md`. Every feature folder has one.
 
+## Expected outcomes → where each one is built
+
+| Expected outcome (problem statement) | Built by | Proven at |
+| --- | --- | --- |
+| Working AI government-scheme matching platform | `apps/web` + `apps/api` + Railway (FE-01…FE-15, BE-07…BE-10) | Gate G4 (hero demo), G6 (APK) |
+| Scheme and eligibility knowledge base | `packages/schemes` + `packages/db` (DATA-01/04, BE-05/06) | `pnpm schemes:check`, published bundle |
+| Personalized scheme matching module | `packages/engine` + `features/matching` (BE-03/04, FE-06) | `pnpm test`, persona regression |
+| Application guidance interface | `scheme-detail`, `documents`, `benefit-card` (FE-09, FE-13) | Gate G4 |
+| Matching accuracy and user-guidance analysis | `packages/eval` + `accuracy-lab` (BE-11/12, FE-12, DATA-03/06) | `reports/latest.json`, `user-tests.md`, gate G5 |
+| Final technical report and demonstration | `report/REPORT.md` (DATA-08, [doc 19](docs/19-technical-report.md)) + demo script ([doc 16](docs/16-demo-mode-and-script.md)) | Submitted PDF + live demo |
+
 ## Priority legend (used in every spec)
 
 | Tag | Meaning | Rule |
@@ -82,6 +93,7 @@ yojana-saathi/
 | [16 Demo mode and script](docs/16-demo-mode-and-script.md) | The 3-minute stage demo, minute by minute |
 | [17 Knowledge base guide](docs/17-knowledge-base-guide.md) | How to turn a scheme page into verified rules |
 | [18 Database on Railway](docs/18-database-railway.md) | What Postgres stores (and never stores), schema, deploy |
+| [19 Technical report](docs/19-technical-report.md) | Outline, evidence map and prompt for the final report |
 
 ## Commands (once scaffolded)
 

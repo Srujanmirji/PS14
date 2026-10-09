@@ -27,6 +27,7 @@ Srujan merges every branch into `main`. Branch names: `fe/<task-id>`, `be/<task-
 | **G4** | 14 | **Hero demo end to end** (onboarding → conversation → results → detail → documents) in demo mode, offline | Everyone on P0 bugs; no P1 work |
 | **G5** | 18 | 50 personas pass; baseline report committed; the 3 chosen P1 showcase features work | Drop the weakest P1 |
 | **G6** | 20 | **Feature freeze.** APK installed on demo phones; backup video recorded | Only bug fixes after this |
+| **G7** | 23 | Technical report PDF exported (DATA-08); deck numbers filled; both ready to submit | Submit what you have; never submit late |
 
 ## Timeline
 
