@@ -22,6 +22,16 @@ yojana-saathi/
 
 Package names: `@yojana/contracts`, `@yojana/engine`, `@yojana/schemes`, `@yojana/db`, `@yojana/eval`, `@yojana/web`, `@yojana/api`.
 
+### Workspace build contract
+
+Every backend workspace exposes `"exports": "./src/index.ts"` and `"types": "./src/index.ts"`. Packages are consumed directly from source: their `build` and `typecheck` scripts run `tsc --noEmit`, with no `composite`, `tsc -b` or package `dist` output. This prevents stale package output during the hackathon.
+
+Only `apps/api` is bundled: tsup uses `noExternal: [/^@yojana\//]` to include workspace source in `dist/index.js`; `start` runs `node dist/index.js`. Seed, eval and other TypeScript scripts run with tsx. The frontend keeps its own Vite build when FE-01 scaffolds it.
+
+There is no root solution tsconfig or project references: references require composite projects, which conflict with source-only packages. Root `typecheck` runs each workspace's `tsc --noEmit`. All workspace configs extend `tsconfig.base.json` with `strict` and `noUncheckedIndexedAccess`. Tests are included in typechecking.
+
+Vitest uses a single root `vitest.config.ts` with `test.projects`; do not create `vitest.workspace.ts`.
+
 ## Dependency direction (one way only)
 
 ```mermaid
@@ -103,7 +113,8 @@ Everything else stays private.
 | `features/a/*` | `@/shared/*`, `@/features/b` (its index only), `@yojana/*` | `@/features/b/components/...`, `@/app/*` |
 | `shared/*` | `@yojana/contracts`, other `shared/*` | any `features/*`, `app/*` |
 | `app/*` | everything | — |
-| `packages/engine` | `@yojana/contracts` | React, fetch, browser APIs |
+| `packages/engine/src/*` (excluding tests) | `@yojana/contracts`, relative paths | Other external imports; `Date`, `Math.random`, `fetch` |
+| `packages/engine/test/*` and source tests | Above, plus `vitest`, `node:fs`, `node:path`, `@yojana/schemes`, `@yojana/eval` | Other external imports |
 
 Path aliases in `tsconfig`: `@/*` → `apps/web/src/*`.
 

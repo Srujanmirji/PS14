@@ -1,0 +1,32 @@
+{
+  "name": "yojana-saathi",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.20.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "lint": "eslint . --max-warnings 0",
+    "eval": "pnpm --filter @yojana/eval run eval",
+    "schemes:check": "pnpm --filter @yojana/schemes run check",
+    "schemes:bundle": "pnpm --filter @yojana/schemes run bundle",
+    "db:generate": "pnpm --filter @yojana/db run generate",
+    "db:migrate": "pnpm --filter @yojana/db run migrate",
+    "db:seed": "pnpm --filter @yojana/db run seed",
+    "db:publish": "pnpm --filter @yojana/db run publish",
+    "db:export": "pnpm --filter @yojana/db run export"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.1",
+    "eslint": "10.12.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1",
+    "vitest": "5.0.3"
+  }
+}

@@ -34,7 +34,8 @@ Yojana Saathi tells you which government schemes you qualify for, even when you 
 | 4 | Next-best-question: asks only what settles the most verdicts | Matching from incomplete information | P0 |
 | 5 | Scheme detail + documents checklist + verify flags + official link | Application guidance interface | P0 |
 | 6 | Accuracy Lab: 50 labelled personas, engine vs LLM-only baseline | Matching accuracy and user-guidance analysis | P1 (but the numbers are P0) |
-| 7 | Works offline after first load; installable; Android app | Platform quality | P1 |
+| 7 | Works offline after first load; installable | Platform quality | P0 |
+| 8 | Android APK installed on demo phones by gate G6 | Platform quality | P0 |
 
 ## Explicitly out of scope (say this on stage)
 

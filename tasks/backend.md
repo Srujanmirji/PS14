@@ -9,20 +9,23 @@ The backend's first job is to unblock everyone else: contracts by hour 2.5, engi
 ### BE-01 · Monorepo scaffold — P0 · H0–1 · depends on: nothing
 
 **Goal:** an empty monorepo where every workspace builds and tests run.
-**Files:** root `package.json`, `pnpm-workspace.yaml`, `tsconfig.base.json`, `eslint.config.js`, `vitest.workspace.ts`, empty `packages/*` and `apps/api`.
+**Files:** root `package.json`, `pnpm-workspace.yaml`, `tsconfig.base.json`, `eslint.config.js`, `vitest.config.ts`, empty `packages/*` and `apps/api`.
 
 **Prompt**
 ```
 Read AGENTS.md and docs/03-folder-structure.md and docs/04-tech-stack.md.
 Create a pnpm workspace monorepo with apps/web (leave empty — frontend scaffolds it), apps/api, packages/contracts, packages/engine, packages/schemes, packages/db, packages/eval.
-TypeScript strict everywhere via tsconfig.base.json with project references. Vitest workspace. ESLint flat config with no-restricted-imports rules from docs/03 (features may only import other features via index.ts; packages/engine may only import @yojana/contracts).
-Root scripts: dev, build, test, eval, schemes:check, schemes:bundle, db:generate, db:migrate, db:seed, db:publish, db:export — wire them to the packages (stubs are fine for now).
+TypeScript strict and noUncheckedIndexedAccess everywhere via tsconfig.base.json. Source-only workspace exports/types point to ./src/index.ts; packages build with tsc --noEmit, without composite or project references. Only apps/api bundles with tsup (noExternal: [/^@yojana\//]) to dist/index.js and starts with node dist/index.js. TypeScript scripts run with tsx. Vitest test.projects in one vitest.config.ts.
+ESLint flat config with no-restricted-imports rules from docs/03. Engine src (excluding tests) imports only contracts and relative paths; ban Date, Math.random and fetch. Engine tests may also import vitest, node:fs, node:path, schemes and eval.
+Root scripts: dev, build, typecheck, test, lint, eval, schemes:check, schemes:bundle, db:generate, db:migrate, db:seed, db:publish, db:export — wire them to the packages (explicit placeholders are fine for now).
 Each package: package.json named @yojana/<name>, src/index.ts exporting nothing yet, one passing placeholder test.
 ```
 
 **Done when**
-- [ ] `pnpm install && pnpm test && pnpm -r build` succeed.
-- [ ] Lint fails if `packages/engine` imports React (add a test file that does, confirm failure, delete it).
+- [x] `pnpm install && pnpm test && pnpm -r build` succeed.
+- [x] Lint fails if `packages/engine/src` imports React (add a temporary source file, confirm failure, delete it).
+- [x] Lint passes for a Vitest import in `packages/engine/test`; remove the temporary probe.
+- [x] Root `pnpm typecheck` and `pnpm lint` succeed.
 
 ---
 

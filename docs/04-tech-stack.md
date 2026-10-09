@@ -34,6 +34,7 @@ Capacitor wraps a **static** web build. Next.js server routes can't ship inside 
 | Purpose | Library | Notes |
 | --- | --- | --- |
 | Server | Hono + `@hono/node-server` | runs as a long-lived Node service on Railway |
+| Bundle | `tsup` | bundles workspace TypeScript source into the deployable API so package edits cannot leave stale output |
 | Validation | zod + `@hono/zod-validator` | |
 | LLM | provider SDK behind `providers/llm` adapter | must support JSON-schema / structured output |
 | Speech | Sarvam REST API behind `providers/speech` adapter | check docs.sarvam.ai for current endpoints and models |
@@ -54,7 +55,13 @@ Drizzle is chosen because the schema is plain TypeScript (easy for an AI agent t
 
 ### Tooling
 
-pnpm workspaces · TypeScript project references · Vitest · Playwright (one smoke test) · ESLint (flat config, `no-restricted-imports`) · Prettier.
+pnpm workspaces · TypeScript (`strict`, `noUncheckedIndexedAccess`, per-workspace `tsc --noEmit`) · Vitest (`test.projects` in one `vitest.config.ts`) · Playwright (one smoke test) · ESLint (flat config, `no-restricted-imports`, with `typescript-eslint` and `@eslint/js` for TypeScript linting) · Prettier.
+
+Workspace `exports` and `types` point to `./src/index.ts`; packages produce no compiled output. No composite projects, `tsc -b` or project references. Root `typecheck` checks every workspace; only the API uses tsup, with `noExternal: [/^@yojana\//]`, and starts from `dist/index.js`. TypeScript scripts and API development run with `tsx`; `@types/node` supplies Node tooling types. BE-01 pins TypeScript 6.0.3 because the current typescript-eslint peer range excludes TypeScript 7; upgrade them together.
+
+Pin pnpm in root `packageManager`, keep `engines: { "node": ">=20" }`, and pin installed versions in the lockfile. The pinned development tools can have higher Node requirements: pnpm 11 needs Node ≥ 22.13 and Vitest 5 needs Node ≥ 22.12; this scaffold is checked on Node 24.
+
+`pnpm-workspace.yaml` allows esbuild's install scripts because tsup, tsx and Vitest use its native build tooling; other dependency install scripts remain blocked by default.
 
 ## Hosting
 

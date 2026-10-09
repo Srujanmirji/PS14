@@ -1,0 +1,28 @@
+{
+  "name": "@yojana/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "types": "./src/index.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --root ../.. --project @yojana/db",
+    "generate": "tsx -e \"console.log('db:generate: BE-01 placeholder; not implemented')\"",
+    "migrate": "tsx -e \"console.log('db:migrate: BE-01 placeholder; not implemented')\"",
+    "seed": "tsx -e \"console.log('db:seed: BE-01 placeholder; not implemented')\"",
+    "publish": "tsx -e \"console.log('db:publish: BE-01 placeholder; not implemented')\"",
+    "export": "tsx -e \"console.log('db:export: BE-01 placeholder; not implemented')\""
+  },
+  "dependencies": {
+    "@yojana/contracts": "workspace:*",
+    "@yojana/schemes": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "4.23.15"
+  }
+}
