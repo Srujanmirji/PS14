@@ -35,6 +35,9 @@ importers:
       '@yojana/db':
         specifier: workspace:*
         version: link:../../packages/db
+      zod:
+        specifier: 4.6.5
+        version: 4.6.5
     devDependencies:
       tsup:
         specifier: 8.5.1

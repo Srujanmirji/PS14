@@ -1,0 +1,15 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"updates\":["
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP"
+    }
+  ]
+}
