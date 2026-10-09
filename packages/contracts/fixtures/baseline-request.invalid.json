@@ -1,0 +1,10 @@
+{
+  "profile": {
+    "fixture_number": {
+      "value": 10
+    }
+  },
+  "schemeIds": [
+    "central.fixture"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "utterance": "Synthetic fixture: fewer than ten",
+  "lang": "en",
+  "known": {
+    "fixture_number": {
+      "lt": 10
+    }
+  }
+}

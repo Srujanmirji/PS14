@@ -1,0 +1,12 @@
+{
+  "schemeId": "central.fixture",
+  "status": "guaranteed",
+  "results": [
+    {
+      "criterionId": "fixture.number",
+      "field": "fixture_number",
+      "result": "unknown"
+    }
+  ],
+  "lang": "en"
+}

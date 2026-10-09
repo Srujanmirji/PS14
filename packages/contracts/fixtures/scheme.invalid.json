@@ -1,0 +1,32 @@
+{
+  "id": "central.fixture",
+  "name": {
+    "en": "Synthetic test label",
+    "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+    "hi": "कृत्रिम परीक्षण"
+  },
+  "level": "central",
+  "category": "other",
+  "benefit": {
+    "summary": {
+      "en": "Synthetic test label",
+      "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+      "hi": "कृत्रिम परीक्षण"
+    }
+  },
+  "rule": {
+    "id": "fixture.number",
+    "field": "fixture_number",
+    "op": "gte",
+    "value": 10,
+    "label": {
+      "en": "Synthetic test label",
+      "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+      "hi": "कृत्रिम परीक्षण"
+    }
+  },
+  "documents": [],
+  "steps": [],
+  "sourceUrl": null,
+  "lastChecked": "2026-10-09"
+}

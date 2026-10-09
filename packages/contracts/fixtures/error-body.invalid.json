@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "ARBITRARY_CODE",
+    "message": "Synthetic fixture error",
+    "requestId": "fixture-request"
+  }
+}

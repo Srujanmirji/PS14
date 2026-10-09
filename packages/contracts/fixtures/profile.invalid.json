@@ -1,0 +1,10 @@
+{
+  "id": "fixture-profile",
+  "lang": "en",
+  "entries": {
+    "fixture_number": {
+      "value": 10
+    }
+  },
+  "declined": []
+}

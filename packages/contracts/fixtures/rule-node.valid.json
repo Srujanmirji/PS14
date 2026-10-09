@@ -1,0 +1,43 @@
+{
+  "all": [
+    {
+      "id": "fixture.number",
+      "field": "fixture_number",
+      "op": "gte",
+      "value": 10,
+      "label": {
+        "en": "Synthetic test label",
+        "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+        "hi": "कृत्रिम परीक्षण"
+      }
+    },
+    {
+      "any": [
+        {
+          "not": {
+            "id": "fixture.number",
+            "field": "fixture_number",
+            "op": "gte",
+            "value": 10,
+            "label": {
+              "en": "Synthetic test label",
+              "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+              "hi": "कृत्रिम परीक्षण"
+            }
+          }
+        },
+        {
+          "id": "fixture.number",
+          "field": "fixture_number",
+          "op": "gte",
+          "value": 10,
+          "label": {
+            "en": "Synthetic test label",
+            "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+            "hi": "कृत्रिम परीक्षण"
+          }
+        }
+      ]
+    }
+  ]
+}

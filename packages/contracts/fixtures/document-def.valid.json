@@ -1,0 +1,13 @@
+{
+  "id": "fixture_document",
+  "name": {
+    "en": "Synthetic test label",
+    "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+    "hi": "कृत्रिम परीक्षण"
+  },
+  "howToGet": {
+    "en": "Synthetic test label",
+    "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+    "hi": "कृत्रिम परीक्षण"
+  }
+}

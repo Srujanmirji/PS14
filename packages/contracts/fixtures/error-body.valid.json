@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "INVALID_INPUT",
+    "message": "Synthetic fixture error",
+    "requestId": "fixture-request"
+  }
+}

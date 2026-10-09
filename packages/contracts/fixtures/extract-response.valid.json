@@ -1,0 +1,11 @@
+{
+  "updates": [
+    {
+      "field": "fixture_number",
+      "value": {
+        "lt": 10
+      },
+      "evidence": "fewer than ten"
+    }
+  ]
+}

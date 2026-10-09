@@ -1,0 +1,7 @@
+{
+  "field": "fixture_number",
+  "unlocks": "one",
+  "schemeIds": [
+    "central.fixture"
+  ]
+}

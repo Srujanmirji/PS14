@@ -1,0 +1,24 @@
+{
+  "id": "fixture-persona",
+  "description": "Synthetic contract fixture, not a citizen",
+  "tags": [
+    "partial"
+  ],
+  "profile": {},
+  "truth": {
+    "fixture_number": {
+      "value": {
+        "gte": 0,
+        "lte": 10
+      },
+      "source": "user_tapped",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    }
+  },
+  "expected": {
+    "central.fixture": "maybe"
+  },
+  "labelledBy": [
+    "Fixture reviewer A"
+  ]
+}

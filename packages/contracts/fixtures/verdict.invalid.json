@@ -1,0 +1,16 @@
+{
+  "schemeId": "central.fixture",
+  "status": "maybe",
+  "results": [
+    {
+      "criterionId": "fixture.number",
+      "field": "fixture_number",
+      "result": "unknown"
+    }
+  ],
+  "missingFields": [
+    "fixture_number"
+  ],
+  "failed": [],
+  "score": "one"
+}

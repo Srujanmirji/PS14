@@ -1,0 +1,8 @@
+{
+  "value": {
+    "gte": 0,
+    "lte": 10
+  },
+  "source": "user_tapped",
+  "updatedAt": "2026-10-09T00:00:00Z"
+}

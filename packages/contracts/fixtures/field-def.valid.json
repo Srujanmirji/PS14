@@ -1,0 +1,10 @@
+{
+  "id": "fixture_number",
+  "type": "number",
+  "askOrder": 1,
+  "question": {
+    "en": "Synthetic test label",
+    "kn": "ಕೃತಕ ಪರೀಕ್ಷೆ",
+    "hi": "कृत्रिम परीक्षण"
+  }
+}

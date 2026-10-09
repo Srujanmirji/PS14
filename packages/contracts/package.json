@@ -12,5 +12,8 @@
     "build": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --root ../.. --project @yojana/contracts"
+  },
+  "dependencies": {
+    "zod": "4.6.5"
   }
 }
