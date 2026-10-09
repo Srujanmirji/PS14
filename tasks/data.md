@@ -1,6 +1,6 @@
 # Data tasks
 
-**Owner:** Aryan · **Owns:** `packages/schemes/data`, `packages/schemes/fields.json`, `packages/schemes/documents.json`, `packages/eval/personas`, translation review of every `i18n/*.json`, the accuracy and user-test numbers in the pitch.
+**Owners:** Pranav (knowledge base, report) · Shravan (personas, languages, QA, pitch) · **Owns:** `packages/schemes/data`, `packages/schemes/fields.json`, `packages/schemes/documents.json`, `packages/eval/personas`, translation review of every `i18n/*.json`, the accuracy and user-test numbers in the pitch.
 
 The accuracy number on stage is only as good as these files. Engineers never edit scheme facts or labels; they file a note for you.
 

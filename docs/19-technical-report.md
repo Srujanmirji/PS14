@@ -2,7 +2,7 @@
 
 The sixth expected outcome. Judges may read it after the demo, so it must stand on its own. It is written mostly from evidence the build already produces, so it takes about 2 hours, not 6.
 
-**Owner:** Aryan (sections 1–3, 6–8) · Srujan (sections 4–5) · Satvik (screenshots, section 6 figures)
+**Owner:** Pranav (sections 1–3, 6–8) · Srujan (sections 4–5) · Satvik (screenshots, section 6 figures)
 **When:** outline at hour 14, filled at hours 20–23, exported to PDF before the deadline.
 **File:** `report/REPORT.md` → exported as `report/Yojana-Saathi-Technical-Report.pdf` (e.g. with the `md-to-pdf` npm package, or paste into a Docs artifact and download as PDF).
 **Length:** 8–12 pages. Every number must come from a file in the repo, and the report says which.

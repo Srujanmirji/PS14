@@ -94,6 +94,7 @@ yojana-saathi/
 | [17 Knowledge base guide](docs/17-knowledge-base-guide.md) | How to turn a scheme page into verified rules |
 | [18 Database on Railway](docs/18-database-railway.md) | What Postgres stores (and never stores), schema, deploy |
 | [19 Technical report](docs/19-technical-report.md) | Outline, evidence map and prompt for the final report |
+| [20 RAG scheme Q&A](docs/20-rag-scheme-qa.md) | Grounded answers about a scheme from official text, with citations; never eligibility |
 
 ## Commands (once scaffolded)
 

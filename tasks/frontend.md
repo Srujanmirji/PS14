@@ -1,6 +1,6 @@
 # Frontend tasks
 
-**Owner:** Satvik (UI) · Srujan takes FE-12 and integration · **Owns:** `apps/web/**`
+**Owners:** Satvik (visual design, screens) · Samarth (app logic, mobile) · Srujan takes FE-12 and integration · **Owns:** `apps/web/**`
 
 Build against mocks first (`VITE_API_MODE=mock`), flip to the real API at gate G3. The demo path (P0) must be done by hour 14 before any showcase work.
 

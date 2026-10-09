@@ -1,6 +1,6 @@
 # Backend tasks
 
-**Owner:** Srujan · **Owns:** `apps/api`, `packages/contracts`, `packages/engine`, `packages/db`, `packages/eval/src`, `packages/schemes/src`, Railway.
+**Owners:** Srujan (lead, engine, eval) · Aryan (DB, API, AI routes) · **Owns:** `apps/api`, `packages/contracts`, `packages/engine`, `packages/db`, `packages/eval/src`, `packages/schemes/src`, Railway.
 
 The backend's first job is to unblock everyone else: contracts by hour 2.5, engine by hour 6, a served bundle by hour 8.
 

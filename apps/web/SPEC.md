@@ -45,6 +45,7 @@ apps/web/
 | voice | P1 | — (mic, playback) |
 | benefit-card | P1 | Benefit card |
 | accuracy-lab | P1 | `/lab` |
+| scheme-qa | P1 | Ask about this scheme (RAG) |
 | assisted-mode | P2 | Operator screens |
 | reminders | P2 | — |
 

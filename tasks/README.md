@@ -2,11 +2,25 @@
 
 Three tracks run in parallel and meet at fixed **gates**. Each track owns its folders, so nobody edits the same files at 3 a.m.
 
-| Track | File | Owner | Owns these folders |
+| Track | File | People | Owns these folders |
 | --- | --- | --- | --- |
-| **Frontend** | [`frontend.md`](frontend.md) | Satvik (UI) | `apps/web/**` (except where a task names another owner) |
-| **Backend** | [`backend.md`](backend.md) | Srujan (lead, integration) | `apps/api/**`, `packages/contracts`, `packages/engine`, `packages/db`, `packages/eval/src`, `packages/schemes/src` |
-| **Data** | [`data.md`](data.md) | Aryan | `packages/schemes/data`, `fields.json`, `documents.json`, `packages/eval/personas`, all `i18n/*.json` reviews |
+| **Frontend** | [`frontend.md`](frontend.md) | Satvik (visual design, screens) · Samarth (app logic, mobile) | `apps/web/**` (except where a task names another owner) |
+| **Backend** | [`backend.md`](backend.md) | Srujan (lead, engine, eval, integration) · Aryan (DB, API, AI routes) | `apps/api/**`, `packages/contracts`, `packages/engine`, `packages/db`, `packages/eval/src`, `packages/schemes/src` |
+| **Data** | [`data.md`](data.md) | Pranav (knowledge base, report) · Shravan (personas, languages, QA, pitch) | `packages/schemes/data`, `fields.json`, `documents.json`, `packages/eval/personas`, all `i18n/*.json` reviews |
+| **RAG** (cross-track) | [`rag.md`](rag.md) | DATA-09 → data · BE-16 → backend · FE-17 → frontend | `packages/schemes/sources`, `apps/api/src/routes/ask`, `features/scheme-qa` |
+
+## Who does what
+
+| Person | Tasks | Before the event |
+| --- | --- | --- |
+| **Srujan** | BE-01–04 · BE-10 (P1) · BE-11 · BE-12 · FE-12 · merges every branch, runs the gates | Railway + Sarvam accounts; one test call each |
+| **Aryan** | BE-05 · BE-06 · BE-07 (**G2**) · BE-08 (**G3**) · BE-09 · BE-13 · BE-14. Start the LLM adapter and extract prompt with recorded fixtures at H2.5, once contracts land | LLM provider key + one test call; read docs 09, 13, 18 |
+| **Satvik** | FE-02 · FE-04 · FE-05 · FE-08 · FE-09 (**G4**) · FE-13 (P1) · FE-14. Build FE-08/09 against mocks from H7.5; don't wait for FE-07 | Google Stitch explorations of 5 screens (doc 06) |
+| **Samarth** | FE-01 (**G0**) · FE-03 · FE-06 · FE-07 · FE-10 · FE-11 (P1) · FE-15 (**G6**) | Android Studio + JDK; "hello" Capacitor APK with mic permission on the demo phone |
+| **Pranav** | DATA-P1 · DATA-P2 · DATA-01 (**G1**) · DATA-02 · DATA-04 · DATA-08 (**G7**) | Scheme shortlist + criteria sheets |
+| **Shravan** | DATA-P3 · DATA-P4 · DATA-03 · DATA-05 · DATA-06 · DATA-07 · demo rehearsal + backup video. Needs a native Kannada speaker on hand | 50 personas double-labelled with Pranav; hero lines by a native Kannada speaker |
+
+If Srujan falls behind on integration, BE-10 moves to Aryan.
 
 Srujan merges every branch into `main`. Branch names: `fe/<task-id>`, `be/<task-id>`, `data/<task-id>`.
 
