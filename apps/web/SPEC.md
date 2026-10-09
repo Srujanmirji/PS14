@@ -67,7 +67,7 @@ First visit with no saved language → redirect to `/welcome`.
 
 ## Acceptance
 
-- [ ] `pnpm --filter @yojana/web dev` runs; `build` produces a PWA with no manifest errors.
+- [x] `pnpm --filter @yojana/web dev` runs; `build` produces a PWA with no manifest errors.
 - [ ] Hero demo flow works in demo mode with network disabled.
 - [ ] Lighthouse performance ≥ 85 on mobile for `/` (installability verified in DevTools).
 - [ ] `npx cap sync android` succeeds and the APK runs the hero flow.
