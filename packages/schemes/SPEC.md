@@ -34,5 +34,5 @@ src/
 
 ## Acceptance
 
-- [ ] `pnpm schemes:check` exits non-zero on any error with file + JSON path.
+- [x] `pnpm schemes:check` exits non-zero on any error with file + JSON path.
 - [ ] ≥ 10 schemes by hour 5, ≥ 40 by hour 14.

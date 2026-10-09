@@ -12,8 +12,8 @@
     "build": "tsc --noEmit",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --root ../.. --project @yojana/schemes",
-    "check": "tsx -e \"console.log('schemes:check: BE-01 placeholder; not implemented')\"",
-    "bundle": "tsx -e \"console.log('schemes:bundle: BE-01 placeholder; not implemented')\""
+    "check": "tsx src/cli.ts check",
+    "bundle": "tsx src/cli.ts bundle"
   },
   "dependencies": {
     "@yojana/contracts": "workspace:*"
